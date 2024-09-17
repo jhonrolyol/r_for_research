@@ -4,10 +4,10 @@
 #                  Professional School of Economics
 #
 #
-#                   PROGRAMMING COURSE IN RSTUDIO
+#                              LEARNING R
 #
-#                              Lecture 1
-#                    ..............................
+#                         A Scientific Calculator
+#                .......................................
 #
 #                          Jhon R. Ordoñez 
 #                      (rolyordonezleon@gmail.com)
@@ -56,47 +56,18 @@
   library(Hmisc)
 
 # Create folders from Rstudio ---------------------------------------------
-  #dir.create("1.slides")
-  #dir.create("2.scripts")
-  #dir.create("3.raw_data")
-  #dir.create("4.documentation")
-  #dir.create("5.processed_data")
-  #dir.create("6.results")
-  #dir.create("6.results/6.1.tables")
-  #dir.create("6.results/6.2.figures")
-  #dir.create("7.analysis")
+  dir.create("1.slides")
+  dir.create("2.scripts")
+  dir.create("3.raw_data")
+  dir.create("4.documentation")
+  dir.create("5.processed_data")
+  dir.create("6.results")
+  dir.create("6.results/6.1.tables")
+  dir.create("6.results/6.2.figures")
+  dir.create("7.analysis")
   
 
 # Your first program ------------------------------------------------------
-  mean(1:5)
-
-# How to get help in R ----------------------------------------------------
-  ?mean
-  ?"+"  
-  ?"if"  
-  ??plotting
-  ?? "regression model"
-  
-  help("mean")
-  help("+")
-  help("if")
-  help.search("plotting")
-  help.search("regression model")  
-  
-  a_vector <- c(1, 3, 6, 10)  
-  apropos("vector")
-  
-  apropos("z$")
-  apropos("[4-9]")
-
-  example(plot)  
-  demo()
-  demo(Japanese)
-
-  browseVignettes()  
-  
-  vignette("Sweave", package = "utils")
-  RSiteSearch("{Bayesian regression}")
   
   
 
