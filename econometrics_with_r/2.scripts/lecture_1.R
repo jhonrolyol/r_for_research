@@ -1,8 +1,4 @@
 #------------------------------------------------------------------------------#
-#           National University of San Cristóbal de Huamanga                      
-#       Faculty of Economic, Administrative and Accounting Sciences
-#                  Professional School of Economics
-#
 #
 #                           ECONOMETRICS WITH R
 #
