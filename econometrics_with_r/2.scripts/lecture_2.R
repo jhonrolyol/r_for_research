@@ -25,31 +25,19 @@
   # Alt  + +          : ~
   # ...
 
+# Outline -----------------------------------------------------------------
+  # Install packages
+  # Libraries
+  # Create folders from Rstudio
+  # 1.- Script used in chapter 01
+    ## 1.1.- R as a calculator
+    ## 1.2.- Install packages
+    ## 1.3.-Objects
+    ## ...
+
 # Install packages --------------------------------------------------------
-  install.packages("readxl")
-  install.packages("ggplot2")
-  install.packages("deSolve")
-  install.packages("nortest")
-  install.packages("tseries")
-  install.packages("FinTS")
-  install.packages("RcmdrMisc")
-  install.packages("pastecs")
-  install.packages("xts")
-  install.packages("lattice")
-  install.packages("Hmisc")
 
 # load libraries ----------------------------------------------------------
-  library(readxl) 
-  library(ggplot2)
-  library(deSolve)
-  library(nortest)
-  library(tseries)
-  library(FinTS)
-  library(RcmdrMisc)
-  library(pastecs)
-  library(xts)
-  library(lattice)
-  library(Hmisc)
 
 # Create folders from Rstudio ---------------------------------------------
   dir.create("1.slides")
@@ -62,7 +50,35 @@
   dir.create("6.results/6.2.figures")
   dir.create("7.analysis")
   
-# Your first program ------------------------------------------------------
-  
-  
+# 2.- Script used in chapter 02 -------------------------------------------
 
+  ## 2.1.- Example_2_3 ----------------------------------------------------
+    data(ceosal1, package = "wooldridge")
+    attach(ceosal1)
+    
+    # Ingredients to the OLS formulas
+    cov(roe, salary)
+    var(roe)    
+    mean(salary)    
+    mean(roe)    
+    
+    # Manual calculation of OLS coefficients 
+    (b1hat <- cov(roe, salary) / var(roe))
+    (b0hat <- mean(salary) - b1hat*mean(roe))
+    
+    # "detach" the data frame 
+    detach(ceosal1)
+        
+  ## 2.2.- Example_2_3_2 --------------------------------------------------
+    data(ceosal1, package = "wooldridge")
+    
+    # OLS regression 
+    lm(salary ~ roe, data = ceosal1)
+    lm(salary ~ roe - 1, data = ceosal1) # omitting intercept
+    lm(salary ~ 0 + roe, data = ceosal1) # omitting intercept
+    
+    names(ceosal1)
+    lm(salary ~ roe + sales, data = ceosal1)
+    lm(salary ~ roe + sales - 1, data = ceosal1)
+        
+    
