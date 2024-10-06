@@ -29,10 +29,10 @@
   # Install packages
   # Libraries
   # Create folders from Rstudio
-  # 1.- Script used in chapter 01
-    ## 1.1.- R as a calculator
-    ## 1.2.- Install packages
-    ## 1.3.-Objects
+  # 2.- Script used in chapter 02
+    ## 2.1.- Example_2_3
+    ## 2.2.- Example_2_3_2
+    ## 2.3.- 
     ## ...
 
 # Install packages --------------------------------------------------------
