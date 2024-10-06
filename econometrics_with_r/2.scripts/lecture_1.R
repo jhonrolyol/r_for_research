@@ -73,15 +73,43 @@
                        "xts", "zoo"))
 
   ## 1.3.- Objects  -------------------------------------------------------
+    # Generate object x (no output)
+    x <- 5
+    
+    # Display x & x^2
+    x
+    x^2
+    
+    # Generate objects y & z with immediate display using ():
+    (y <- 3)
+    (z <- y^x)
+    
   ## 1.4.- Vectors --------------------------------------------------------
-  
-
-  ...
-
-
-
+    # Define  a with immediate output through parentheses:
+    (a <- c(1,2,3,4,5,6))
+    (b <- a + 1)
+    (c <- a + b)
+    (d <- b*c)
+    sqrt(d)
+    
+  ## 1.5.- Vector-Functions -----------------------------------------------
+    # Define vector
+    (a <- c(7,2,6,9,4,1,3))
+    
+    # Basic functions
+    sort(a)
+    length(a)
+    min(a)
+    max(a)
+    sum(a)
+    prod(a)
+    
+    # Creating special vectors
+    numeric(20)
+    rep(1,20)
+    
   ## 1.50.- Simulation inference figure -----------------------------------
-  
+    #
   
   
   
