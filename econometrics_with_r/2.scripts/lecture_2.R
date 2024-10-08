@@ -81,4 +81,35 @@
     lm(salary ~ roe + sales, data = ceosal1)
     lm(salary ~ roe + sales - 1, data = ceosal1)
         
+
+  ## 2.3.- Example_2_3_3 --------------------------------------------------
+    data(ceosal1, package = "wooldridge")
     
+    # OLS regression 
+    CEOregres <- lm(salary ~ roe, data = ceosal1)
+    names(CEOregres)
+    
+    # Scatter plot (restrict y axis limits)
+    with(ceosal1, plot(roe, salary, ylim = c(0, 4000)))
+    
+    # Add OLS regression line
+    abline(CEOregres)
+        
+
+  ## 2.4.- Examen_2_4 -----------------------------------------------------
+    data(wage1, package = "wooldridge")
+
+    # OLS regression 
+    lm(wage ~ educ, data = wage1)
+    
+    model1 <- lm(wage ~ educ, data = wage1)
+    summary.lm(model1)
+        
+    
+    
+    
+    
+    
+    
+
+
