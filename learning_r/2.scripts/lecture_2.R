@@ -26,30 +26,7 @@
   # ...
 
 # Install packages --------------------------------------------------------
-  install.packages("readxl")
-  install.packages("ggplot2")
-  install.packages("deSolve")
-  install.packages("nortest")
-  install.packages("tseries")
-  install.packages("FinTS")
-  install.packages("RcmdrMisc")
-  install.packages("pastecs")
-  install.packages("xts")
-  install.packages("lattice")
-  install.packages("Hmisc")
-
 # load libraries ----------------------------------------------------------
-  library(readxl) 
-  library(ggplot2)
-  library(deSolve)
-  library(nortest)
-  library(tseries)
-  library(FinTS)
-  library(RcmdrMisc)
-  library(pastecs)
-  library(xts)
-  library(lattice)
-  library(Hmisc)
 
 # Create folders from Rstudio ---------------------------------------------
   dir.create("1.slides")
