@@ -70,11 +70,56 @@
     # OLS regression
     summary(lm(log(wage) ~ educ + exper + tenure, data = wage1))
     
-  
+  ## 3.3.- Example_3_3 ----------------------------------------------------
+    data(k401k, package = "wooldridge")
+    
+    # OLS regression 
+    summary(lm(prate ~ mrate + age, data = k401k))
 
+  ## 3.4.- Example_3_5 ----------------------------------------------------
+    data(crime1, package = "wooldridge")
+    
+    # Model without avgsen
+    summary(lm(narr86 ~ pcnv + avgsen + ptime86 + qemp86, data = crime1))
+    
+    # Model with avgsen 
+    summary(lm(narr86 ~ pcnv + avgsen + ptime86 + qemp86, data = crime1))
 
-
-
-
-
+  ## 3.5.- Example_3_6 ----------------------------------------------------
+    data(wage1, package = "wooldridge")
+    
+    # OLS regression 
+    summary(lm(log(wage) ~ educ, data = wage1))
+        
+  ## 3.6.- OLS_matrices ---------------------------------------------------
+    data(gpa1, package = "wooldridge")
+    
+    # Determine sample size & no. of regressors
+    n <- nrow(gpa1)
+    k <- 2
+    
+    # Extract "y"
+    y <- gpa1$colGPA
+    
+    # Extract "X" & add a column of ones 
+    X <- cbind(1, gpa1$hsGPA, gpa1$ACT)
+    
+    # Display first rows of "X"
+    head(X)
+    
+    # Parameter estimates
+    (bhat <- solve(t(X)%*%X) %*% t(X)%*%y)
+    
+    # Residuals, estimated variance of "u" and SER
+    uhat <- y - X %*% bhat
+    sigsqhat <- as.numeric(t(uhat)%*%uhat/(n - k - 1))        
+    (SER <- sqrt(sigsqhat))
+    
+    # Estimated variance of the parameter estimators and SE
+    Vbetahat <- sigsqhat * solve(t(X)%*%X)
+    (se <- sqrt(diag(Vbetahat)))    
+    
+    summary.lm(lm(colGPA ~ hsGPA + ACT, data = gpa1))        
+    
+    
 
