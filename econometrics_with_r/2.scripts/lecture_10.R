@@ -93,14 +93,7 @@
     zoodata <- zoo(intdef, order.by = intdef$year)
   # Time series plot of inflation
     plot(zoodata$i3)
-    # Another option
-      ts2 <- ggplot(zoodata, aes(x=year, y = i3)) + 
-        geom_line(color = "red") + 
-        labs(title = "Time Series of i3",
-             x = "Date", y = "i3")
-      ggsave(filename = "6.results/6.2.figures/fig2_ts.pdf", plot = ts2,
-             with = 8, height = 6, dpi = 300)
-      
+   
   
   
 
